@@ -1,4 +1,9 @@
-# cuidala
+CUIDA.LA
+==================
+
+.. image:: https://travis-ci.com/jfbm74/cuidala.svg?branch=master
+   :alt: Tested with Travis CI
+   :target: https://travis-ci.com/jfbm74/cuidala.svg?branch=master
 
 Description
 ===========

@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from Database import views
 from rest_framework.routers import DefaultRouter
-from Database.views import *
+from backend.views import *
 
 router = DefaultRouter()
 router.register(r'api/v1/user', UserViewSet)

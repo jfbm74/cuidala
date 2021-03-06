@@ -4,6 +4,9 @@ from django.http import HttpResponse
 from rest_framework import viewsets
 from backend.serializer import *
 
+def index(request):
+    return render(request, 'index.html')
+
 class UserViewSet(viewsets.ModelViewSet):
     serializer_class = Userserializer
     queryset = User.objects.all()

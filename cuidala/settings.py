@@ -56,7 +56,7 @@ ROOT_URLCONF = 'cuidala.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['/WorkSpace/cuidala/backend/template'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

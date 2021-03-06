@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from Database.models import *
+from backend.models import *
 from django.http import HttpResponse
 from rest_framework import viewsets
-from Database.serializer import *
+from backend.serializer import *
 
 class UserViewSet(viewsets.ModelViewSet):
     serializer_class = Userserializer
@@ -40,4 +40,3 @@ class SkillsViewSet(viewsets.ModelViewSet):
 class ServicesViewSet(viewsets.ModelViewSet):
     serializer_class = Servicesserializer
     queryset = Services.objects.all()
-    

@@ -40,3 +40,4 @@ class SkillsViewSet(viewsets.ModelViewSet):
 class ServicesViewSet(viewsets.ModelViewSet):
     serializer_class = Servicesserializer
     queryset = Services.objects.all()
+    

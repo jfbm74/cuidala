@@ -5,6 +5,9 @@ from datetime import datetime
 
 class Locations(models.Model):
     name=models.CharField(max_length=30)
+    def __str__(self):
+        return self.name
+    
 
 class Skills(models.Model):
     name=models.CharField(max_length=30)
@@ -15,7 +18,7 @@ class Services(models.Model):
 class User(models.Model):
     first_name=models.CharField(max_length=30)
     last_name=models.CharField(max_length=30)
-    legal_id=models.CharField(max_length=10)
+    legal_id=models.CharField(max_length=15)
     email=models.EmailField()
     password=models.CharField(max_length=50)
     caregiver=models.BooleanField()
@@ -55,14 +58,14 @@ class School(models.Model):
 class Jobs(models.Model):
     the_type=models.CharField(max_length=30)
     created_at=models.DateTimeField(auto_created=True)
-    tart_date=models.DateTimeField(auto_created=True)
+    start_date=models.DateTimeField(auto_created=True)
     end_date=models.DateTimeField(auto_created=True)
-    patient_phone=models.CharField(max_length=10)
+    patient_phone=models.CharField(max_length=20)
     patient_age=models.IntegerField()
     patient_id=models.ForeignKey(User, on_delete=models.CASCADE)
     salary_start=models.IntegerField()
     salary_end=models.IntegerField()
-    status=models.CharField(max_length=10)
+    status=models.CharField(max_length=20)
     updated_at=models.DateTimeField(auto_now_add=True)
     location_id=models.CharField(max_length=30)
 
@@ -70,7 +73,7 @@ class Applicants(models.Model):
     job_id=models.ForeignKey(Jobs, on_delete=models.CASCADE)
     caregiver_offer=models.IntegerField()
     patient_offer=models.IntegerField()
-    status=models.CharField(max_length=10)
+    status=models.CharField(max_length=15)
     created_at=models.DateTimeField(auto_created=True)
     updated_at=models.DateTimeField(auto_now_add=True)
     caregiver_id=models.ForeignKey(User, on_delete=models.CASCADE, default=1)

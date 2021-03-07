@@ -21,6 +21,17 @@ from backend.views import *
 
 router = DefaultRouter()
 router.register(r'api/v1/user', UserViewSet)
+router.register(r'api/v1/caregiver_skills', Caregiver_skillsViewSet)
+router.register(r'api/v1/caregiver_service', Caregiver_serviceViewSet)
+router.register(r'api/v1/works', WorksViewSet)
+router.register(r'api/v1/school', SchoolViewSet)
+router.register(r'api/v1/jobs', JobsViewSet)
+router.register(r'api/v1/applicants', ApplicantsViewSet)
+router.register(r'api/v1/availability', AvailabilityViewSet)
+router.register(r'api/v1/job_service', Job_serviceViewSet)
+router.register(r'api/v1/locations', LocationsViewSet)
+router.register(r'api/v1/skills', SkillsViewSet)
+router.register(r'api/v1/services', ServicesViewSet)
 urlpatterns = router.urls
 
 urlpatterns += [

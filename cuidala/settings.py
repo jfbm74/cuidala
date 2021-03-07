@@ -78,12 +78,13 @@ WSGI_APPLICATION = 'cuidala.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'CuidaLA',
-        'USER': 'cuidala',
-        'PASSWORD': 'Cuidala2021!',
+        'NAME': 'cuidalapp_test',
+        'USER': 'cuidalapp_user',
+        'PASSWORD': '4dreamCoders',
+        'HOST': '167.172.149.83',
+        'PORT': '3306',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators

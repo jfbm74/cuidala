@@ -28,7 +28,7 @@ class User(models.Model):
     created_at=models.DateTimeField(default=datetime.now, blank=True)
     updated_at=models.DateTimeField(default=datetime.now, blank=True)
     location_id=models.ForeignKey(Locations, on_delete=models.CASCADE)
-    photo=models.ImageField()
+    photo=models.ImageField(blank=True)
 
 class Caregiver_service(models.Model):
     service_id=models.ForeignKey(Services, on_delete=models.CASCADE)

@@ -13,8 +13,8 @@
     </h3>
     <p>
       Inicie su búsqueda gratuita de cuidador en su área
-    </p>
-    <input type="submit" value="Encuentra Cuidador">
+    </p> 
+    <a><router-link to="/registerform"><input type="submit" value="Encuentra Cuidador"></router-link></a>
   </div>
   <div class="job">
     <h3>
@@ -23,7 +23,7 @@
     <p>
       Crea un perfil y busca trabajo<br><br>
     </p>
-    <a href="https://articulo.mercadolibre.com.co/MCO-603729660-monitor-lg-ips-de-29-full-hd-75hz-hdmi-displayport-29wn600-_JM?searchVariation=73991616153#searchVariation=73991616153&position=22&type=item&tracking_id=02aa70d5-6b1d-48d5-a271-a69aa58d3fbf"><input type="submit" value="Encontrar trabajos"></a>
+    <a><router-link to="/registerPaciente"><input type="submit" value="Encontrar trabajos"></router-link></a>
   </div>
 </div>
 <!-- end Registro -->
@@ -32,12 +32,11 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+  name: 'Registro',
 }
 </script>
+
+
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>

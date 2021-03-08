@@ -19,9 +19,24 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-  path: '/registro',
-  name: 'Registro',
-  component: () => import(/* webpackChunkName: "about" */ '../views/Registro.vue')
+    path: '/registro',
+    name: 'Registro',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Registro.vue')
+  },
+  {
+    path: '/registerform',
+    name: 'RegisterForm',
+    component: () => import(/* webpackChunkName: "about" */ '../views/RegisterForm.vue')
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Login.vue')
+  },
+  {
+    path: '/registerPaciente',
+    name: 'RegisterPaciente',
+    component: () => import(/* webpackChunkName: "about" */ '../views/RegisterPaciente.vue')
   }
 ]
 

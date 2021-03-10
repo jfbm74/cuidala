@@ -7,7 +7,7 @@
         <li><a href="#">Cuidadores</a></li>
         <li><a href="#">Contacto</a></li>
         <li><a > <router-link to="/registro">Reg&iacute;strate </router-link></a></li>
-        <li><a href="#">Login</a></li>
+        <li><a><router-link to="/login">Login</router-link></a></li>
         
       </ul>
     </header>

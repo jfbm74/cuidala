@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import datetime
+from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
 
@@ -8,35 +9,36 @@ class Locations(models.Model):
     def __str__(self):
         return self.name
     
-
 class Skills(models.Model):
     name=models.CharField(max_length=30)
+    def __str__(self):
+        return str(self.id)
 
 class Services(models.Model):
     name=models.CharField(max_length=30)
+    def __str__(self):
+        return str(self.id)
 
-class User(models.Model):
-    first_name=models.CharField(max_length=30)
-    last_name=models.CharField(max_length=30)
+class User(AbstractUser):
     legal_id=models.CharField(max_length=15)
-    email=models.EmailField()
-    password=models.CharField(max_length=50)
-    caregiver=models.BooleanField()
-    patient=models.BooleanField()
+    caregiver=models.BooleanField(default=False)
+    patient=models.BooleanField(default=False)
     adress=models.CharField(max_length=50)
     phone=models.CharField(max_length=15)
     created_at=models.DateTimeField(default=datetime.now, blank=True)
     updated_at=models.DateTimeField(default=datetime.now, blank=True)
     location_id=models.ForeignKey(Locations, on_delete=models.CASCADE)
     photo=models.ImageField(blank=True)
+    def __str__(self):
+        return str(self.id)
 
 class Caregiver_service(models.Model):
     service_id=models.ForeignKey(Services, on_delete=models.CASCADE)
-    caregiver_id=models.ForeignKey(User, on_delete=models.CASCADE)
+    caregiver_id=models.ForeignKey(User, related_name="userservices", on_delete=models.CASCADE)
 
 class Caregiver_skills(models.Model):
     skill_id=models.ForeignKey(Skills, on_delete=models.CASCADE)
-    caregiver_id=models.ForeignKey(User, on_delete=models.CASCADE)
+    caregiver_id=models.ForeignKey(User, related_name="userskills", on_delete=models.CASCADE)
 
 class Works(models.Model):
     employer=models.CharField(max_length=30)
@@ -56,18 +58,20 @@ class School(models.Model):
     location_id=models.ForeignKey(Locations, on_delete=models.CASCADE)
 
 class Jobs(models.Model):
-    the_type=models.CharField(max_length=30)
+    the_type=models.ForeignKey(Services, on_delete=models.CASCADE)
     created_at=models.DateTimeField(auto_created=True)
     start_date=models.DateTimeField(auto_created=True)
     end_date=models.DateTimeField(auto_created=True)
     patient_phone=models.CharField(max_length=20)
     patient_age=models.IntegerField()
-    patient_id=models.ForeignKey(User, on_delete=models.CASCADE)
+    patient_id=models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
     salary_start=models.IntegerField()
-    salary_end=models.IntegerField()
+    salary_end=models.IntegerField(blank=True)
     status=models.CharField(max_length=20)
     updated_at=models.DateTimeField(auto_now_add=True)
-    location_id=models.CharField(max_length=30)
+    location_id=models.ForeignKey(Locations, on_delete=models.CASCADE)
+    def __str__(self):
+        return str(self.id)
 
 class Applicants(models.Model):
     job_id=models.ForeignKey(Jobs, on_delete=models.CASCADE)

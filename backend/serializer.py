@@ -1,10 +1,9 @@
 from rest_framework import serializers
 from .models import *
+from django.contrib.auth import get_user_model
 
-class Userserializer(serializers.ModelSerializer):
-    class Meta:
-        model = User
-        fields = '__all__'
+User = get_user_model()
+
 class Caregiver_skillsserializer(serializers.ModelSerializer):
     class Meta:
         model = Caregiver_skills
@@ -48,4 +47,25 @@ class Skillsserializer(serializers.ModelSerializer):
 class Servicesserializer(serializers.ModelSerializer):
     class Meta:
         model = Services
+        fields = '__all__'
+
+class Userserializer(serializers.ModelSerializer):
+    userservices = Caregiver_serviceserializer(read_only=True, many=True)
+    userskills = Caregiver_skillsserializer(read_only=True, many=True)
+    def create(self, validated_data):
+        user =  User.objects.create_user(
+            email=validated_data['email'],
+            username=validated_data['username'],
+            password=validated_data['password'],
+            location_id=validated_data['location_id'],
+            first_name=validated_data['first_name'],
+            last_name=validated_data['last_name'],
+            legal_id=validated_data['legal_id'],
+            caregiver=validated_data['caregiver'],
+            adress=validated_data['adress'],
+            phone=validated_data['phone'],
+        )
+        return user
+    class Meta:
+        model = User
         fields = '__all__'

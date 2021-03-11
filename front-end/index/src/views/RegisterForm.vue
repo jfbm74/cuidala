@@ -1,100 +1,83 @@
 <template>
-  <!-- Contacto -->
-  <div class="registerform">
-    <form @submit="onSubmit">
-    <h4>Cuéntanos acerca de ti</h4>
-    <p>
-      <label for="nombre">Nombre<abbr title="required" aria-label="required">*</abbr></label>
-      <br><input type="text" id="nombre" name="Nombre" placeholder="Nombre" required v-model.trim="form.first_name"><br>
-      <label for="apellido">Apellido*</label>
-      <br><input type="text" id="apellido" name="apellido" placeholder="Apellido" required v-model.trim="form.last_name"><br>
-      <label for="cedula">Cédula*</label>
-      <br><input type="tel" id="cedula" name="cedula" placeholder="Cédula" required v-model.trim="form.legal_id"><br>
-      Género
-      <br><input type="radio" id="mujer" name="mujer">
-          <label for="mujer">Mujer</label>
-          <input type="radio" id="hombre" name="hombre">
-          <label for="hombre">Hombre</label>
-      <br>
-      <label for="fecha">Fecha de nacimiento*</label>
-      <br><input type="date" id="fecha" name="fecha"><br>
-      <label for="menu">Ciudad</label>
-      <br><select id="menu" name="menu" v-model.trim="form.location_id"> <!-- Consumir la API -->
-      <option value="0">...</option>
-      <option value="1">Cali</option>
-      <option value="2">Bogotá</option>
-      <option value="3">Medellín</option>
-      <option value="4">Barranquilla</option>
-      </select><br>
-      <label for="celular">Celular</label>
-      <br><input type="tel" id="celular" name="celular" v-model.trim="form.phone"><br>
-      <label for="email">Correo electrónico</label>
-      <br><input type="email" id="email" name="email" v-model.trim="form.email"><br>
-      <label for="vemail">Verifica tu correo electrónico</label>
-      <br><input type="email" id="vemail" name="email"><br>
-      <label for="password">Password</label>
-      <br><input type="password" id="password" name="password" placeholder="Contraseña" v-model.trim="form.password"><br>
-      <label for="direccion">Dirección</label>
-      <br><input type="text" id="direccion" name="direccion" v-model.trim="form.adress"><br>
-      Disponibilidad / Nº de horas
-      <br><input type="time" id="hora" name="hora"><br>
-      <label for="trabajo">Preferencias de trabajo</label>
-      <br><select id="trabajo" name="trabajo"><!-- Consumir la API -->
-      <option value="0">...</option>
-      <option value="1">Tiempo completo</option>
-      <option value="2">Medio tiempo</option>
-      <option value="3">Por hora</option>
-      </select>
-      <br>
-      <label for="servicio">Servicios</label>
-      <br><select id="servicio" name="servicio"><!-- Consumir la API -->
-      <option value="0">...</option>
-      <option value="1">Suministro de medicamentos</option>
-      <option value="2">Aseo del paciente</option>
-      <option value="3">Cuidado integral</option>
-      </select><br>
-      <label for="educacion">Educación</label>
-      <br><select id="educacion" name="educacion"><!-- Consumir la API -->
-      <option value="0">...</option>
-      <option value="1">Primaria</option>
-      <option value="2">Secundaria</option>
-      <option value="3">Técnico</option>
-      <option value="4">Tecnológico</option>
-      <option value="5">Universitario</option>
-      <option value="6">No tiene</option>
-      </select><br>
-      <label for="habilidades">Habilidades</label>
-      <br><select id="habilidades" name="habilidades"><!-- Consumir la API -->
-      <option value="0">...</option>
-      <option value="1">Inyectología</option>
-      <option value="2">Curaciones</option>
-      <option value="3">Toma de signos vitales</option>
-      <option value="4">Suministro de alimentos</option>
-      </select><br>
-      <label for="experiencia">Experiencia</label>
-      <br><select id="experiencia" name="experiencia"><!-- Consumir la API -->
-      <option value="0">...</option>
-      <option value="1">0 - 2 años</option>
-      <option value="2">2 - 4 años</option>
-      <option value="3">4 - 6 años</option>
-      </select><br>
-      <label for="file">Subir foto</label>
-      <input type="file" name="file" id="file" accept="image/*">
-      </p>
-      <input type="hidden" id="timestamp" name="timestamp" value="1286705410">
-      <br><button type="submit">Registrar</button>
-    
-    </form>
+  <div class="RegisterForm">
+    <!-- Start Contact Form Area -->
+    <section class="contact__form__area ptb--100 bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+            <div class="contact-form-wrap bg-cat-3">
+              <h2 class="contact__title">Cuéntanos sobre ti</h2>
+              <form id="contact-form" action="mail.php" method="post">
+                <div class="single-contact-form">
+                  <!-- <div class="contact-box">
+                      <label for="">Nombres*</label>
+                      <input type="text" name="name" class="form-control">
+                      <label for="">Apellidos*</label>
+                      <input type="text" name="lastname" class="form-control">
+                  </div> -->
+                  <label for="">Nombres*</label>
+                  <input type="text" name="name" class="form-control" required v-model.trim="form.first_name">
+                  <br>
+                  <label for="">Apellidos*</label>
+                  <input type="text" name="lastname" class="form-control" required v-model.trim="form.last_name">
+                  <br>
+                  <label for="">Cédula*</label>
+                  <input type="tel" name="cedula" class="form-control" required v-model.trim="form.legal_id">
+                  <br>
+                  <label for="">Email*</label>
+                  <input type="email" name="email" class="form-control" v-model.trim="form.email">
+                  <br>
+                  <label for="">Passowrd*</label>
+                  <input type="password" name="pwd" class="form-control" v-model.trim="form.password">
+                  <br>
+                  <label for="menu">Ciudad</label>
+                  <br><select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="menu" name="menu" v-model.trim="form.location_id"> <!-- Consumir la API -->
+                    <option selected>Seleccione una opción</option>
+                    <option value="1">Cali</option>
+                    <option value="2">Bogotá</option>
+                    <option value="3">Medellín</option>
+                    <option value="4">Barranquilla</option>
+                  </select><br>
+                  <label for="">Dirección</label>
+                  <input type="text" name="address" class="form-control" v-model.trim="form.adress">
+                </div>
+                <br>
+                <label for="">Celular</label>
+                <input type="tel" name="phone" class="form-control" v-model.trim="form.phone">
+                <div class="single-contact-form">
+                    <label for="">Subir foto</label>
+                    <input class="form-control form-control-sm" type="file" name="foto">
+                </div>
+                <div class="single-contact-form">
+                  <div class="contact-box message"></div>
+                </div>
+                <div class="contact-btn">
+                  <button type="submit" class="bst__btn btn--theme__color">REGÍSTRATE</button>
+                </div>
+              </form>
+            </div>
+            <div class="form-output">
+              <p class="form-messege"></p>
+            </div>
+          </div>
+        </div>
+      </div>            
+    </section>
+    <!-- End Contact Form Area -->
+    <Footer/>
   </div>
-  <!-- end contacto -->
 </template>
 
 <script>
 import axios from 'axios'
 import swal from 'sweetalert'
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'RegisterForm',
+  components: {
+    Footer
+  },
   data () {
       return {
           form: {
@@ -141,3 +124,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.ptb--100 {
+  padding: 30px;
+}
+</style>

@@ -1,27 +1,132 @@
 <template>
 <div class="section">
-    <div class="section1">
-        <div class="section-2">
-          <h3 clas="section-title">
-              Tenemos el cuidador ideal para <br> cada personas
-          </h3>
-          <div class="cuadrado"></div>
-          <p>
-              Cuida.la quiere haceros facil lo que parecía dificil. Desde Cuida.la<br>
-              los ayudaremos a encontrar el cuidador de personas ideal para<br>
-              vuestra familia. Queremos daros la tranquilidad de tus seres<br>
-              queridos los caules estarán en las mejores manos.
-          </p>
-          <img class="size-img" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggc3R5bGU9ImZpbGw6I0ZGREIwQzsiIGQ9Ik0yNTYsNTEyTDI1Niw1MTJjMTM5LjY5NS01Mi4yNTgsMjMyLjI3Ni0xODUuNzM5LDIzMi4yNzYtMzM0Ljg4N1Y4Ni43MTYNCgljLTQ3Ljg5MiwwLTg2LjcxNi0zOC44MjQtODYuNzE2LTg2LjcxNkgyNTZIMTEwLjQ0YzAsNDcuODkyLTM4LjgyNCw4Ni43MTYtODYuNzE2LDg2LjcxNnY5MC4zOTYNCglDMjMuNzI0LDMyNi4yNjEsMTE2LjMwNSw0NTkuNzQyLDI1Niw1MTJMMjU2LDUxMnoiLz4NCjxwYXRoIHN0eWxlPSJmaWxsOiNGQkJGMDA7IiBkPSJNMjU2LDUxMkwyNTYsNTEyYzEzOS42OTUtNTIuMjU4LDIzMi4yNzYtMTg1LjczOSwyMzIuMjc2LTMzNC44ODdWODYuNzE2DQoJYy00Ny44OTIsMC04Ni43MTYtMzguODI0LTg2LjcxNi04Ni43MTZIMjU2QzI1NiwwLDI1NiwzOTgsMjU2LDUxMkwyNTYsNTEyeiIvPg0KPHBvbHlnb24gc3R5bGU9ImZpbGw6I0YxRjFGMjsiIHBvaW50cz0iMjIzLjY0MiwzNDYuMjgxIDE0Ni42NCwyNjkuMjggMTg5LjA2NiwyMjYuODUzIDIyMy42NDIsMjYxLjQyOSAzMjIuOTM0LDE2Mi4xMzcgDQoJMzY1LjM2LDIwNC41NjMgIi8+DQo8cG9seWdvbiBzdHlsZT0iZmlsbDojRTZFNkU2OyIgcG9pbnRzPSIyNTYsMzEzLjkyMyAyNTYsMjI5LjA3MSAzMjIuOTM0LDE2Mi4xMzcgMzY1LjM2LDIwNC41NjMgIi8+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==" />
-          <p class="img-parrafo">
-              Un servicio de asistencia a domicilio de calidad para<br>
-              cuidar a las personas como se merecen
-          </p>
-        </div>
-        <div class="style-img">
-          <img class="section-img" src="../assets/banner1.jpg" alt="">
-        </div>
-    </div>
+    <!-- Start Our Service Area -->
+        <section class="our__service pb--100 pt--90 bg-white">
+            <div class="container">
+                <div class="row htc__service">
+                    <!-- Start Single Service -->
+                    <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+                        <div class="service bg-white text-center">
+                            <div class="service__inner">
+                                <div class="service__icon">
+                                    <img src="images/service/shape/1.png" alt="icon images"> 
+                                </div>
+                                <h2><a href="#">Acompañamiento 24h/7</a></h2>
+                                <p>Nuestros pacientes son libres de escoger la tarifa justa que más les convega, contratar y pagar por los servicios por su cuenta</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Service -->
+                    <!-- Start Single Service -->
+                    <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+                        <div class="service bg-white text-center">
+                            <div class="service__inner">
+                                <div class="service__icon">
+                                    <img src="images/service/shape/2.png" alt="icon images"> 
+                                </div>
+                                <h2><a href="#">Autonomía de Elección</a></h2>
+                                <p>Convega con los mejores cuidadores de acuerdo a la tarífa y tipo de servicios. Podrás ver siempre su hoja de vida, experiencia y calificación para contratar</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Service -->
+                    <!-- Start Single Service -->
+                    <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+                        <div class="service bg-white text-center">
+                            <div class="service__inner">
+                                <div class="service__icon">
+                                    <img src="images/service/shape/3.png" alt="icon images"> 
+                                </div>
+                                <h2><a href="#">Pensamos en tu Seguridad</a></h2>
+                                <p>Nuestros cuidadores ofrecen una amplia gama de servicios: movilidad, comidas, limpieza interna, aseo, ejercicio, recordatorios, medicamentos y compañia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Service -->
+                    <!-- Start Single Service -->
+                    <div class="col-md-3 col-lg-3 hidden-sm col-xs-12">
+                        <div class="service bg-white text-center">
+                            <div class="service__inner">
+                                <div class="service__icon">
+                                    <img src="images/service/shape/4.png" alt="icon images"> 
+                                </div>
+                                <h2><a href="#">Planee con Facilidad</a></h2>
+                                <p>Coordine las tareas diarias y los recordatorios con su cuidador utilizando detallando en la oferta de trabajo el alcance del servicio</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Service -->
+                </div>
+            </div>
+        </section>
+        <!-- End Our Service Area -->
+        <!-- Start Our Feature Area -->
+        <section class="our__top__service bg--white pb--100">
+            <div class="container">
+                <!-- Start Section Title -->
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                        <div class="section__title text-center">
+                            <h2 class="title__line">Pensamos en tu seguridad</h2>
+                            <p>Siempre tenemos presente la seguridad, tanto en la verificación de antecedentes de los cuidadores, como la verificación de sus conocimientos en temas de Seguridad y Cuidado del paciente</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Section Title -->
+            </div>
+            <div class="container">
+                <!-- End Section Title --> 
+                <div class="row">
+                    <div class="top__service__wrap clearfix mt--50 xs__mt--20">
+                        <!-- Start Single Feature -->
+                        <div class="col-md-4 col-lg-4 col-xs-12 col-sm-6">
+                            <!-- Start Single feature -->
+                            <div class="top__service__inner text-center">
+                                <div class="top__service__icon">
+                                    <img src="images/feature/shape/1.png" alt="feature icon">
+                                </div>
+                                <div class="top__service__details">
+                                    <h4><a href="service.html">Cuidadores Verificados</a></h4>
+                                    <p>Contamos con verificación automáticas de antecedentes judiciales, estudios y experiencia de los cuidadores</p>
+                                </div>
+                            </div>
+                            <!-- End Single feature -->
+                        </div>
+                        <!-- End Single Feature -->
+                        <!-- Start Single Feature -->
+                        <div class="col-md-4 col-lg-4 col-xs-12 col-sm-6">
+                            <!-- Start Single feature -->
+                            <div class="top__service__inner text-center">
+                                <div class="top__service__icon">
+                                    <img src="images/feature/shape/2.png" alt="feature icon">
+                                </div>
+                                <div class="top__service__details">
+                                    <h4><a href="service.html">Tu elijes a tu cuidador</a></h4>
+                                    <p>Puedes seleccionar la mejor oferta con base a la calificación del cuidador y su historial de contratos y reseña de pacientes anteriormente a su cargo</p>
+                                </div>
+                            </div>
+                            <!-- End Single feature -->
+                        </div>
+                        <!-- End Single Feature -->
+                        <!-- Start Single Feature -->
+                        <div class="col-md-4 col-lg-4 col-xs-12 hidden-sm">
+                            <!-- Start Single feature -->
+                            <div class="top__service__inner text-center">
+                                <div class="top__service__icon">
+                                    <img src="images/feature/shape/3.png" alt="feature icon">
+                                </div>
+                                <div class="top__service__details">
+                                    <h4><a href="service.html">Sugerencia de contrato</a></h4>
+                                    <p>Cuando contratas a un cuidador, te hacemos llegar un documento que detalla el alcance del servicio y las condiciones pactadas</p>
+                                </div>
+                            </div>
+                            <!-- End Single feature -->
+                        </div>
+                        <!-- End Single Feature -->
+                    </div>
+                </div>               
+            </div>
+        </section>
 </div>
 </template>
 
@@ -30,66 +135,3 @@ export default {
   name: 'Section'
 }
 </script>
-
-<style scoped>
-.section {
-  width: 100%;
-  height: 368px;
-  margin: 0;
-  position: relative;
-}
-.section-2 {
-  width: 631px;
-  height: 368px;
-}
-.section1 {
-  
-  height: 368px;
-  margin: 0;
-}
-.section1 h3 {
-  font-size: 28px;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  text-align: left;
-  margin: 0px 50px;
-  padding-top: 30px;
-}
-.section1 p {
-  font-size: 15px;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  padding-top: 20px;
-  text-align: left;
-  margin-left: 50px;
-}
-.size-img{
-  height: 25px;
-  float: left;
-  margin-left: 80px;
-  padding-top: 20px;
-}
-.section1 .img-parrafo {
-    padding-left: 80px;
-    
-}
-.section1 .cuadrado {
-  width: 150px;
-  height: 10px;
-  background: #efd240;
-  margin-left: 53px;
-  margin-top: 10px;
-}
-.section1 .style-img {
-  background: indianred;
-  width: 631px;
-  height: 368px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-.style-img .section-img {
-  width: 631px;
-  height: 368px;
-}
-
-
-</style>

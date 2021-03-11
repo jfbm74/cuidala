@@ -23,7 +23,7 @@ class SchoolViewSet(viewsets.ModelViewSet):
     serializer_class = Schoolserializer
     queryset = School.objects.all()
 class JobsViewSet(viewsets.ModelViewSet):
-    serializer_class = Job_serviceserializer
+    serializer_class = Jobsserializer
     queryset = Jobs.objects.all()
 class ApplicantsViewSet(viewsets.ModelViewSet):
     serializer_class = Applicantsserializer

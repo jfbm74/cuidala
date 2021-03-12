@@ -27,7 +27,7 @@ class User(AbstractUser):
     phone=models.CharField(max_length=15)
     created_at=models.DateTimeField(default=datetime.now, blank=True)
     updated_at=models.DateTimeField(default=datetime.now, blank=True)
-    location_id=models.ForeignKey(Locations, on_delete=models.CASCADE)
+    location_id=models.ForeignKey(Locations, on_delete=models.CASCADE, default=1)
     photo=models.ImageField(blank=True)
     def __str__(self):
         return str(self.id)

@@ -43,5 +43,6 @@ urlpatterns += [
     path('login/', Login.as_view(), name = 'login'),
     path('theuser/', include(('backend.urls', 'api'))),
     path('logout/', Logout.as_view()),
+    path('tokens/', views.obtain_auth_token),
 
 ]

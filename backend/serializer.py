@@ -53,7 +53,7 @@ class Userserializer(serializers.ModelSerializer):
     userservices = Caregiver_serviceserializer(read_only=True, many=True)
     userskills = Caregiver_skillsserializer(read_only=True, many=True)
     def create(self, validated_data):
-        user =  User.objects.create_user(
+        useron =  User.objects.create_user(
             email=validated_data['email'],
             username=validated_data['username'],
             password=validated_data['password'],
@@ -65,7 +65,7 @@ class Userserializer(serializers.ModelSerializer):
             adress=validated_data['adress'],
             phone=validated_data['phone'],
         )
-        return user
+        return useron
     class Meta:
         model = User
         fields = '__all__'
